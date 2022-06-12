@@ -27,7 +27,10 @@ def question_marks_check(words_ch):
 def main():
     # Calling function get_words() and storing result in list_of_words
     list_of_words = get_words()
-    print(list_of_words)
+    # Calling function question_marks_check() with 1 parameter
+    question_marks_check(list_of_words)
+    # Getting input from user, casting to string and storing in variable letter
+    letter = str(input("Enter a letter: "))
 
 
 if __name__ == '__main__':
