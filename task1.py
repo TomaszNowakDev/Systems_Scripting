@@ -13,6 +13,16 @@ def get_words():
     return words
 
 
+# A function definition which uses a loop to go through all the words in the words table
+def question_marks_check(words_ch):
+    print("\nQuestion marks check: ")
+    # loop through all the words
+    for word in words_ch:
+        # if char '?' in word print message
+        if '?' in word:
+            print(f"{word} contains question mark")
+
+
 # Main function definition
 def main():
     # Calling function get_words() and storing result in list_of_words
