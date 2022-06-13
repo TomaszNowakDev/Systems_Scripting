@@ -59,6 +59,12 @@ def main():
     # calling function play_the_game() with 1 parameter and store the result of it in variable after_game
     after_game = play_the_game(game_list)
 
+    # cast list to the tuple
+    players_tuple = tuple(i for i in after_game)
+    # print list of players before the game and tuple of players left after the game
+    print(players_list)
+    print(players_tuple)
+
 
 if __name__ == '__main__':
     main()
