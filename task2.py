@@ -1,4 +1,6 @@
+import random
 import copy
+import time
 
 
 # Define a function that collects input from the user and returns that list of players to the main function
@@ -30,6 +32,23 @@ def play_the_game(players):
         except ValueError:
             # print message if input is not an integer
             print("Numbers only please!")
+    # calling function one_round() with 2 parameters and store the result of it in variable result
+    result = one_round(elimination, players)
+    # return result to the main()
+    return result
+
+
+# Define function to play
+def one_round(num, players_list):
+    print(f"Game Has started!\nPlayers list: {players_list}\nPlayers to eliminate: {num}.")
+    for i in range(num):
+        index = random.randint(1, 6)
+        busted = players_list.pop(index)
+        print(f"Player {busted} was eliminated!")
+        # wait to 30 seconds before next elimination
+        time.sleep(30)
+    # return list of not eliminated players
+    return players_list
 
 
 def main():
@@ -38,7 +57,7 @@ def main():
     # copying list of players in order to keep it in memory
     game_list = copy.copy(players_list)
     # calling function play_the_game() with 1 parameter and store the result of it in variable after_game
-    play_the_game(game_list)
+    after_game = play_the_game(game_list)
 
 
 if __name__ == '__main__':
