@@ -36,7 +36,7 @@ def converge(num):
 def main():
     # Calling function get_number() and storing result of it in number
     number = get_number()
-    print(f"You entered a number {number}.\nLet's start the game...")
+    print(f"You entered the number {number}.\nLet's start the game...")
     # call the function converge() with 1 parameter and store the result of it
     result = converge(number)
     # if result present that means the game ended
