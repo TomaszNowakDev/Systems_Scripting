@@ -84,6 +84,20 @@ def make_a_backup():
     print(os.listdir(os.path.join(os.sep, main_folder, 'backup')))
 
 
+# definition of the function
+def read_from_archive():
+    print("\nReading from the  archive backup1.zip, content: ")
+    # change current working directory to backup folder
+    os.chdir(os.path.join(os.sep, main_folder, 'backup'))
+    # establish connection with backup1.zip in read mode
+    r_zip = zipfile.ZipFile('backup1.zip', 'r')
+    # reading filenames in backup1.zip archive
+    for file in r_zip.infolist():
+        print(file.filename)
+    # close connection to the archive
+    r_zip.close()
+
+
 # define main
 def main():
     print("\n\tWelcome to the program\n")
@@ -95,6 +109,8 @@ def main():
     rename_files()
     # Calling function make_a_backup() to make a backup of the doc folder
     make_a_backup()
+    # Calling function read_from_archive() to read data from archive
+    read_from_archive()
 
 
 if __name__ == '__main__':
