@@ -17,15 +17,26 @@ def create_structure(fname):
     else:
         print('Creating new folders structure...\n')
 
-        # now create new structure of folders
-        global main_folder  # make main_folder a global variable
-        main_folder = os.path.join(os.sep, current_folder, fname)  # assign value to main_folder
-        # make folders required for specification
-        os.makedirs(os.path.join(os.sep, main_folder, 'backup'))
-        os.makedirs(os.path.join(os.sep, main_folder, 'working', 'pics'))
-        os.makedirs(os.path.join(os.sep, main_folder, 'working', 'movie'))
-        os.makedirs(os.path.join(os.sep, main_folder, 'working', 'docs', 'party'))
-        os.makedirs(os.path.join(os.sep, main_folder, 'working', 'docs', 'school'))
+    # now create new structure of folders
+    global main_folder  # make main_folder a global variable
+    main_folder = os.path.join(os.sep, current_folder, fname)  # assign value to main_folder
+    # make folders required for specification
+    os.makedirs(os.path.join(os.sep, main_folder, 'backup'))
+    os.makedirs(os.path.join(os.sep, main_folder, 'working', 'pics'))
+    os.makedirs(os.path.join(os.sep, main_folder, 'working', 'movie'))
+    os.makedirs(os.path.join(os.sep, main_folder, 'working', 'docs', 'party'))
+    os.makedirs(os.path.join(os.sep, main_folder, 'working', 'docs', 'school'))
+
+    # change of current working directory to docs
+    os.chdir(os.path.join(os.sep, main_folder, 'working', 'docs'))
+    # make list of files_names
+    files_names = ['CORONAVIRUS.txt', 'DANGEROUS.txt', 'KEEPSAFE.txt', 'STAYHOME.txt', 'HYGIENE.txt']
+    # loop through list of files
+    for i, value in enumerate(files_names):
+        f = open(value, 'w')  # establish connection to file in write mode
+        f.write(f"This is the name of the {files_names[i]} file before changing name.")  # write to file
+        f.close()  # close connection to file
+    print('...new folders created successfully!')
 
 
 # define main
