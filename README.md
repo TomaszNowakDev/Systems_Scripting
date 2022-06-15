@@ -61,3 +61,20 @@ integer number before proceeding. (Amazingly, this sequence works for any intege
 Sooner or later you will arrive at value 1).
 
 
+Task 4
+Write a Python script that implements functions to address the following task. The first function
+should accept a string parameter representing a folder name. This folder name should be
+interactively provided by the user.
+The first function should automate the creation of a folder structure starting with the provided
+folder name. If this folder exist, delete it and recrate it. Inside this folder, create two subfolders
+named “backup” and “working”. Inside the “working” folder create three other subfolders
+named “pics”, “docs” and “movie”. Inside the “docs” folder create five files
+(CORONAVIRUS.txt, DANGEROUS.txt, KEEPSAFE.txt, STAYHOME.txt, HYGIENE.txt)
+with varying content of your choice and two subfolders (school and party).
+Use another function to rename all the files in the “docs” folder to lowercase. The extension
+“.txt” should be renamed to uppercase. Ensure that the folder exist before proceeding and note
+that the subfolders in that directory should remain unchanged.
+When the renaming is complete, use another function to implement the Python zipfile module
+to archive the “docs” folder and make seven backup archives of it in the top-level “backup”
+folder. Output the content of the backup folder and one of the zip archives for verification
+purpose.
