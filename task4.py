@@ -39,6 +39,20 @@ def create_structure(fname):
     print('...new folders created successfully!')
 
 
+# Function definition
+def rename_files():
+    print("Renaming files in progress...\n")
+    # check if folder exists
+    folder_exists = isdir(os.path.join(os.sep, main_folder, 'working', 'docs'))
+    if folder_exists:
+        # change the name of all .txt files
+        for file in os.listdir(os.path.join(os.sep, main_folder, 'working', 'docs')):
+            if file.endswith('.txt'):
+                # Use lowercase for chars from start to last 3 chars in word and use uppercase for last 3 chars
+                os.rename(file, file[:-3].lower() + file[-3:].upper())
+    print('...files renamed successfully!')
+
+
 # define main
 def main():
     print("\n\tWelcome to the program\n")
@@ -46,6 +60,8 @@ def main():
     folder_name = str(input(f"How do you want to name your folder? "))
     # Calling function that takes 1 parameter name of the folder to create
     create_structure(folder_name)
+    # Calling function rename_files() to rename files in the doc folder
+    rename_files()
 
 
 if __name__ == '__main__':
