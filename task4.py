@@ -1,5 +1,6 @@
 import os
 import shutil
+import zipfile
 from os.path import isdir
 
 # define main_folder variable later on I will make it global to facilitate access to the path of the folder
@@ -53,6 +54,36 @@ def rename_files():
     print('...files renamed successfully!')
 
 
+# Function definition
+def make_a_backup():
+    print('Preparing for backup...\n')
+    # change of current working directory to working
+    os.chdir(os.path.join(os.sep, main_folder, 'working'))
+    # coping and moving folder 'docs' to backup
+    shutil.copytree(os.path.join(os.sep, main_folder, 'working', 'docs'),
+                    os.path.join(os.sep, main_folder, 'backup', 'docs'))
+
+    # change of current working directory to backup
+    os.chdir(os.path.join(os.sep, main_folder, 'backup'))
+    new_zip = zipfile.ZipFile('backup1.zip', 'w')  # create backup1.up in writing mode
+    # walking through the folder and zipping elements
+    for foldername, subfolders, filenames in os.walk('docs'):
+        new_zip.write(foldername)
+        for filename in filenames:
+            new_zip.write(os.path.join(foldername, filename))  # write to new_zip
+
+    new_zip.close()  # close new_zip
+    # making 7 copies of backup file and call them consecutive numbers
+    for i in range(6):
+        shutil.copy(os.path.join(os.sep, main_folder, 'backup', 'backup1.zip'), os.path.join(os.sep, main_folder, 'backup', f"backup{i + 2}.zip"))
+
+    # remove additional copy of doc folder in backup folder
+    shutil.rmtree(os.path.join(os.sep, main_folder, 'backup', 'docs'))
+    print('...backup completed!\nContent of the backup folder is: ')
+    # print list of backup folder content
+    print(os.listdir(os.path.join(os.sep, main_folder, 'backup')))
+
+
 # define main
 def main():
     print("\n\tWelcome to the program\n")
@@ -62,6 +93,8 @@ def main():
     create_structure(folder_name)
     # Calling function rename_files() to rename files in the doc folder
     rename_files()
+    # Calling function make_a_backup() to make a backup of the doc folder
+    make_a_backup()
 
 
 if __name__ == '__main__':
