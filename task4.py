@@ -17,6 +17,16 @@ def create_structure(fname):
     else:
         print('Creating new folders structure...\n')
 
+        # now create new structure of folders
+        global main_folder  # make main_folder a global variable
+        main_folder = os.path.join(os.sep, current_folder, fname)  # assign value to main_folder
+        # make folders required for specification
+        os.makedirs(os.path.join(os.sep, main_folder, 'backup'))
+        os.makedirs(os.path.join(os.sep, main_folder, 'working', 'pics'))
+        os.makedirs(os.path.join(os.sep, main_folder, 'working', 'movie'))
+        os.makedirs(os.path.join(os.sep, main_folder, 'working', 'docs', 'party'))
+        os.makedirs(os.path.join(os.sep, main_folder, 'working', 'docs', 'school'))
+
 
 # define main
 def main():
