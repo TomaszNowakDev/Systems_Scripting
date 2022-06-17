@@ -120,3 +120,17 @@ When a user enters the word “dope”, the script should output the total numbe
 results recorded so far for the tournament. When a user enters the word “clean”, the script
 should output the total number of negative results. The word “stop”, irrespective of how it
 is written, should be used to end the program.
+
+
+Task 8
+Write an interactive Python script that implements a function, which accepts two parameters - a
+string representing a sentence and a number indicating line of the sentence.
+The function should raise to upper case the first letters of the words appearing in the sentence on
+the first line as long as the sentence contains less than 5 words. When the first sentence contains
+more than 5 words, only the first letter of the first word should be raised to upper case and the user
+should be informed of the situation. For the other subsequent sentences only the first letter of the
+first word should be raised to upper case. The function should return value.
+Continuously and interactively request user to input sentences to be processed and outputted.
+Check input to ensure that user entered a sentence (more than two words). In addition, the
+sentence must be in lower case before passing it to the function. The program should terminate
+when the phrase “finish the work” is entered and notify the user.
