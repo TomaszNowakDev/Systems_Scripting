@@ -1,5 +1,5 @@
 # Systems_Scripting
-Lab Exercises from the Modul taught at MTU.
+Lab Exercises from the Module taught at MTU.
 
 Task 1
 Write a Python script that implements two functions where each accepts a single list parameter
@@ -105,3 +105,32 @@ Sample input: how are you 44 me
 Sample output:
 Sentence contains 5 words
 44
+
+
+Task 7
+Write an interactive Python script to manage and to store doping test results for a sport
+tournament. Use PPS number as identification for each sports person. The PPS number
+should be a combination of numbers and characters. Make it up for this script. The script
+should request a user to input a PPS number or stop or dope or clean.
+When a user enters a given PPS number, the script should output the PPS number and the
+corresponding test result. The test result should be either positive or negative. If a PPS
+number does not exist, the script should offer the option of storing it with a corresponding
+test result.
+When a user enters the word “dope”, the script should output the total number of positive
+results recorded so far for the tournament. When a user enters the word “clean”, the script
+should output the total number of negative results. The word “stop”, irrespective of how it
+is written, should be used to end the program.
+
+
+Task 8
+Write an interactive Python script that implements a function, which accepts two parameters - a
+string representing a sentence and a number indicating line of the sentence.
+The function should raise to upper case the first letters of the words appearing in the sentence on
+the first line as long as the sentence contains less than 5 words. When the first sentence contains
+more than 5 words, only the first letter of the first word should be raised to upper case and the user
+should be informed of the situation. For the other subsequent sentences only the first letter of the
+first word should be raised to upper case. The function should return value.
+Continuously and interactively request user to input sentences to be processed and outputted.
+Check input to ensure that user entered a sentence (more than two words). In addition, the
+sentence must be in lower case before passing it to the function. The program should terminate
+when the phrase “finish the work” is entered and notify the user.
