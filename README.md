@@ -78,3 +78,30 @@ When the renaming is complete, use another function to implement the Python zipf
 to archive the “docs” folder and make seven backup archives of it in the top-level “backup”
 folder. Output the content of the backup folder and one of the zip archives for verification
 purpose.
+
+
+Task 5
+Write a Python script with a function that accepts a single string parameter. The function should
+count the number of occurrence of each word in the string and return a dictionary containing
+each word as key and the number of its occurrence as value.
+Interactively request a user to input a long sentence containing repetition of words. Invoke your
+function with the user’s input as parameter. Output the returned dictionary. If the user enters
+“finish now” the script should terminate with a goodbye message.
+Sample user input: “Hello how are you doing there with you and hello are we doing it there
+again”
+Sample Output: { 'Hello': 1, 'how': 1, 'are': 2, 'you': 2, 'doing': 2, 'there': 2, 'with': 1, 'and': 1,
+'hello': 1, 'we': 1, 'it': 1, 'again': 1}.
+
+
+Task 6
+Write a Python script with a function that accepts a single parameters representing a sentence.
+The function should identify and report when the sentence contains a component consisting of
+numbers. In that case, output the number of words contained in the sentence and furthermore,
+output the component containing numbers.
+Now interactively request inputs from user and call the function to operate on the inputs and
+output the results. Check input to ensure that user entered a sentence (more than two words).
+The program should terminate when the phrase “end me now” is entered and notify the user.
+Sample input: how are you 44 me
+Sample output:
+Sentence contains 5 words
+44
