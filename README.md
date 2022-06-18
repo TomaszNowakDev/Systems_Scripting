@@ -134,3 +134,23 @@ Continuously and interactively request user to input sentences to be processed a
 Check input to ensure that user entered a sentence (more than two words). In addition, the
 sentence must be in lower case before passing it to the function. The program should terminate
 when the phrase “finish the work” is entered and notify the user.
+
+
+Task 9
+Write a bash script that searches for patterns in files located in a folder. The script should be
+called with two input parameter arguments. Make sure that the arguments are provided before
+proceeding. The first parameter should be a path to a folder and the second parameter should
+be a string pattern.
+The script should search the provided folder and print out the following details for only files
+identified (that is no sub-folder should be considered):
+• Name of the file.
+• Date and time of file creation.
+• Size of the file in bytes.
+• How many times the input string pattern (second parameter) appeared in the file (case
+insensitive).
+Use an array structure to store the file names for those that contain the input string pattern
+(second parameter) at least twice.
+An until loop should be used to iterate through the above array and print out to the terminal all
+the file names as well as write them into a file named report.txt. Use comments to properly
+document your script.
+
