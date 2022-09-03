@@ -1,7 +1,7 @@
 # Systems_Scripting
 Lab Exercises from the Module taught at MTU.
 
-Task 1
+### Task 1
 Write a Python script that implements two functions where each accepts a single list parameter
 containing strings. The first function should check and output the list items containing a
 question mark. The second function should check and output all characters that appear in each
@@ -30,7 +30,7 @@ war contains 1 r
 russia? contains 1 r
 mak?er contains 1 r
 
-Task 2
+### Task 2
 Write a Python script that uses a function or functions to implement an elimination game. The
 game starts with a team of 12 players. During the play, randomly eliminate between 2 – 6
 players. Each time a player is eliminated, output the name of the player with a send-forth
@@ -50,7 +50,7 @@ Result tuple: ('Jan', 'Ti', 'Me', 'Hua', 'Ka', 'Po', 'Zo', 'Ca')
 Original List: ['Jan', 'Bill', 'Ti', 'Lo', 'Me', 'Da', 'Hua', 'Be', 'Ka', 'Po', 'Zo', 'Ca']
 
 
-Task 3
+### Task 3
 Write a Python script that implements a recursive function named converge() that accepts an
 integer parameter. If parameter value is even then converge() should divide parameter value by
 2 and return this value. If parameter value is odd, then function should return 3 times parameter
@@ -61,7 +61,7 @@ integer number before proceeding. (Amazingly, this sequence works for any intege
 Sooner or later you will arrive at value 1).
 
 
-Task 4
+### Task 4
 Write a Python script that implements functions to address the following task. The first function
 should accept a string parameter representing a folder name. This folder name should be
 interactively provided by the user.
@@ -80,7 +80,7 @@ folder. Output the content of the backup folder and one of the zip archives for 
 purpose.
 
 
-Task 5
+### Task 5
 Write a Python script with a function that accepts a single string parameter. The function should
 count the number of occurrence of each word in the string and return a dictionary containing
 each word as key and the number of its occurrence as value.
@@ -93,7 +93,7 @@ Sample Output: { 'Hello': 1, 'how': 1, 'are': 2, 'you': 2, 'doing': 2, 'there': 
 'hello': 1, 'we': 1, 'it': 1, 'again': 1}.
 
 
-Task 6
+### Task 6
 Write a Python script with a function that accepts a single parameters representing a sentence.
 The function should identify and report when the sentence contains a component consisting of
 numbers. In that case, output the number of words contained in the sentence and furthermore,
@@ -107,7 +107,7 @@ Sentence contains 5 words
 44
 
 
-Task 7
+### Task 7
 Write an interactive Python script to manage and to store doping test results for a sport
 tournament. Use PPS number as identification for each sports person. The PPS number
 should be a combination of numbers and characters. Make it up for this script. The script
@@ -122,7 +122,7 @@ should output the total number of negative results. The word “stop”, irrespe
 is written, should be used to end the program.
 
 
-Task 8
+### Task 8
 Write an interactive Python script that implements a function, which accepts two parameters - a
 string representing a sentence and a number indicating line of the sentence.
 The function should raise to upper case the first letters of the words appearing in the sentence on
@@ -136,7 +136,7 @@ sentence must be in lower case before passing it to the function. The program sh
 when the phrase “finish the work” is entered and notify the user.
 
 
-Task 9
+### Task 9
 Write a bash script that searches for patterns in files located in a folder. The script should be
 called with two input parameter arguments. Make sure that the arguments are provided before
 proceeding. The first parameter should be a path to a folder and the second parameter should
@@ -155,7 +155,7 @@ the file names as well as write them into a file named report.txt. Use comments 
 document your script.
 
 
-Task 10
+### Task 10
 Write an interactive bash script that implements a set of menus for creating and writing contents
 into a file, outputting to the terminal the content of a file, change file permission and to
 terminate the script. The write, output and permission change operations should be
@@ -172,9 +172,9 @@ execution permission is already assigned, simply report it. The terminate option
 script with a goodbye message. Properly comment your code.
 
 
-Task 11
+### Task 11
 Write a bash script that automates the creation and deletion of user accounts. The script should
-accept as input argument, a file containing a list of user names to be created on the system.
+accept as input argument, a file containing a list of usernames to be created on the system.
 Enforce that the user provides this input file when running the script.
 The script should check if the usernames already exist on the system before creating the
 accounts. If a user account exit, the script should notify the user and skip that user name to the
